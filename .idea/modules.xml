@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BaseFramework.iml" filepath="$PROJECT_DIR$/BaseFramework.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin_android_base_framework.iml" filepath="$PROJECT_DIR$/kotlin_android_base_framework.iml" />
     </modules>
   </component>
 </project>
