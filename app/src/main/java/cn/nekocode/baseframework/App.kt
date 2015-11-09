@@ -1,10 +1,7 @@
 package cn.nekocode.baseframework
 
 import android.app.Application
-import android.content.Context
 import cn.nekocode.toast.utils.FileUtils
-import java.io.File
-import kotlin.properties.Delegates
 
 
 /**

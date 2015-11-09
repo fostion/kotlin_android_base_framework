@@ -1,7 +1,15 @@
 # README
 
-### features
-- **kotlin version: `1.0.0-beta-1038`**
+### Kotlin
+- **kotlin version: `1.0.0-beta-1103`**
+
+
+### Libraries
+- anko: **`0.7.2`**
+- rxkotlin: **`0.24.100`**
+- retrofit: **`2.0.0-beta1`**
+- picasso: **`2.5.2`**
+
 
 ### Package structure
 ```

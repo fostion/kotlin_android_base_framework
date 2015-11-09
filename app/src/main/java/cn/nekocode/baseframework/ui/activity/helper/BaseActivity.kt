@@ -47,7 +47,8 @@ abstract class BaseActivity : AppCompatActivity() {
                 } else {
 
                     if (msg.what == -101 && msg.arg1 == -102 && msg.arg2 == -103) {
-                        (msg.obj as (()->Unit)).invoke()
+                        val runnable = (msg.obj as WeakReference<()->Unit>).get()
+                        runnable?.invoke()
                         return
                     }
 
@@ -59,10 +60,6 @@ abstract class BaseActivity : AppCompatActivity() {
 
     protected val handler: MyHandler by lazy {
         MyHandler(this)
-    }
-
-    public val _this: BaseActivity by lazy {
-        this
     }
 
     fun <T: Fragment> initFragment(containerId: Int, tag: String, fragmentClass: Class<T>): T? {
@@ -95,7 +92,7 @@ abstract class BaseActivity : AppCompatActivity() {
         msg.what = -101
         msg.arg1 = -102
         msg.arg2 = -103
-        msg.obj = runnable
+        msg.obj = WeakReference<()->Unit>(runnable)
         handler.sendMessageDelayed(msg, delayMillis.toLong())
     }
 
