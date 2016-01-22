@@ -14,6 +14,9 @@ class WeatherPresenter(val itf: WeatherPresenter.ViewInterface): Presenter {
     }
 
     fun created() {
+    }
+
+    fun onCityChanged() {
         REST.api.getWeather("101010100").onUI().subscribe({
             itf.setWeather(it)
         })
